@@ -55,6 +55,8 @@ export default function JAVTutorial() {
             {/* Truyền gì vào props cũng đc */}
             {data.map(jav => {
                 return <JAVItem
+                    key={jav.id}
+                    
                     id={jav.id}
                     name={jav.name}
                     date={jav.date}
