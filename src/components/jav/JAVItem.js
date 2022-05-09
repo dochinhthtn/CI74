@@ -1,10 +1,18 @@
 import React from 'react';
 import "../../css/JAVItem.css";
 
-export default function JAVItem({ name, date, watched, id, onDeleteItem }) {
+export default function JAVItem({ name, date, watched, id, onDeleteItem, onWatchItem, onEditItem }) {
 
     const remove = (event) => {
         onDeleteItem(id);
+    }
+
+    const watch = (event) => {
+        onWatchItem(id);
+    }
+
+    const edit = (event) => {
+        onEditItem(id);
     }
 
     return (<div className="jav-item">
@@ -16,7 +24,9 @@ export default function JAVItem({ name, date, watched, id, onDeleteItem }) {
         </div>
 
         <div className="item-action">
-            <button>Xem</button>
+            <button onClick={edit}>Sửa</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button onClick={watch}>Xem</button>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <button onClick={remove}>Xóa</button>
         </div>

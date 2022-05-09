@@ -14,7 +14,7 @@ export default function JAVCreateForm({ onAddItem }) {
             return;
         }
 
-        onAddItem("hello world"); // addItem(name)
+        onAddItem(name); // addItem(name)
     }
 
     return (<form onSubmit={handleCreateItem}>
