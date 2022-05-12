@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import "../../css/JAVItem.css";
 
 export default function JAVItem({ name, date, watched, id, onDeleteItem, onWatchItem, onEditItem }) {
@@ -43,11 +44,13 @@ export default function JAVItem({ name, date, watched, id, onDeleteItem, onWatch
         </div>
 
         <div className="item-action">
-            {isEditing ? <button onClick={edit}>Lưu</button> : <button onClick={enableEdit}>Sửa</button>}
+            {isEditing ? <Button variant="info" onClick={edit}>Lưu</Button> : <Button variant="warning" onClick={enableEdit}>Sửa</Button>}
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button onClick={watch}>Xem</button>
+            <Button variant="primary" onClick={watch}>Xem</Button>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button onClick={remove}>Xóa</button>
+
+            <Button variant="danger" onClick={remove}>Xóa</Button>
+            <button className="btn btn-danger" onClick={remove}>Xóa</button>
         </div>
     </div>);
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button, Form } from "react-bootstrap";
 
 // onAddItem là 1 function, gọi ở chỗ nào
 // onAddItem = addItem ở bên Tutorial
@@ -18,7 +19,7 @@ export default function JAVCreateForm({ onAddItem }) {
     }
 
     return (<form onSubmit={handleCreateItem}>
-        <input type="text" onChange={(event) => setName(event.target.value)} />
-        <button>Thêm</button>
+        <Form.Control type="text" onChange={(event) => setName(event.target.value)} />
+        <Button variant="primary" type="submit">Thêm</Button>
     </form>);
 }

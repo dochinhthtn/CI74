@@ -1,13 +1,12 @@
 import './App.css';
-import JAVTutorial from './components/jav/JAVTutorial';
-import LoginForm from './components/LoginForm';
-import RegisterForm from './components/RegisterForm';
+
+import ExpenseApp from './components/expense_app/ExpenseApp';
 
 function App() {
 
   return (
     <>
-      <JAVTutorial />
+      <ExpenseApp />
     </>
   );
 }
