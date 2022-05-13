@@ -1,0 +1,16 @@
+.expense-progress-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.expense-progress {
+    width: 100%;
+    border: 1px solid #222;
+    background: #fff;
+    height: 25px;
+}
+
+.expense-current-progress {
+    height: 100%;
+    background-color: aquamarine;
+}
