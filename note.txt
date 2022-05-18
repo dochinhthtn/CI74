@@ -1,0 +1,100 @@
+- NodeJS: nền tảng thực thi JS ngoài trình duyệt => JS có thể làm backend
+- NPM (node package manager): trình quản lý package (thư viện || framework) của NodeJS
+
+
+- ReactJS: thư viện để làm front-end
+- Cốt lõi của ReactJS: Component (Reusable component)
+- Lợi ích khi dùng component: 
+    + Tái sử dụng 
+    + Dễ sửa chữa
+    + Dễ thay thế:
+    + Chuyên môn hóa cao: 
+
+- Trường phái dev ReactJS:
+    + Functional component: tạo ra component bằng những function (lập trình hướng cấu trúc)
+    + Class component: tạo ra component dựa trên class (lập trình hướng đối tượng)
+    + Kết hợp 2 thằng trên
+
+- Cú pháp JSX (javascript xml): không phải HTML
+
+- JSX
+	+ Không có class, thay bằng className
+	+ Phải đóng gói nội dung vào 1 thẻ lớn
+	+ Có thể chèn biến hoặc biểu thức vào bất kỳ đâu
+	+ Kiểu dữ liệu primitive và mảng có thể chèn vào JSX
+	+ Thuộc tính style của các thẻ chỉ đc phép nhận object
+	+ Những thuộc tính của thẻ viết theo quy tắc camelCase
+
+- Props:
+	+ là 1 đối tượng
+	+ Lưu trữ thuộc tính của React Component
+	+ bản thân component không thể thay đổi props (prop is readonly)
+	+ Đặc biệt: thuộc tính children (mảng || React Component): biểu thị cho thằng con của component đó
+
+- Cách chia component trên trang web:
+	+ Tùy thuộc vào kinh nghiệm từng ông.
+	+ Những trang lớn => 1 component: ví dụ
+		HomePage: trang chủ
+		LoginPage: trang đăng nhập
+		RegisterPage: trang đăng ký
+		AboutPage: trang giới thiệu
+	+ Những thành phần layout của trang web: Navbar, SideMenu, Header, Footer
+	+ Những thứ lặp đi lặp lại: MangaContainer, Comment, TopUser, HotManga, ...
+	+ Trên trang quản lý (CMS, Admin elt): List, Chart, Table, Select, ...
+
+
+- State:
+	+ biến đặc biệt để lưu trạng thái của 1 component <=> khi state thay đổi giá trị --> render lại component
+	+ không sử dụng gán giá trị trực tiếp để thay đổi state
+	+ khi nào dùng state:
+		# thao tác với form: lưu lại dữ liệu người dùng nhập vào ô input, select, textarea
+		# load dữ liệu từ bên ngoài --> lưu vào state --> hiển thị ra giao diện
+		# những biến có ảnh hưởng đến giao diện nhưng không phụ thuộc vào tính toán từ component khác
+
+- Những thứ tương đương với false (khi thực hiện so sánh == || khi để trong lệnh if(...))
+	+ ''
+	+ 0
+	+ null/undefined
+	+ NaN
+	+ false
+
+- Data down & State up (Lifting state)
+	+ Trao đổi dữ liệu giữa các component
+	+ Data down: truyền dữ liệu từ cha xuống con thông qua props
+	+ State up: component con thực hiện hành động của component cha
+	+ Đối với mảng hoặc đối tượng, phải tạo 1 mảng hoặc đối tượng mới để cập nhật lại state, 
+		không sửa trực tiếp vào mảng hoặc đối tượng cũ.
+
+
+- Side Effect (useEffect):
+	+ xử lý công việc bên ngoài của 1 component: 
+		load dữ liệu, 
+		tương tác timeout, interval (setTimeout, setInterval)
+		tương tác trực tiếp với 1 DOM (thay đổi nội dung, xử các sự kiện)
+		lắng nghe (subscribe, unsubscribe) 1 service nào đó (nâng cao)
+	
+	+ sử dụng hook useEffect trong component
+	+ kiểu dependency:
+		[] => chỉ chạy function 1 lần duy nhất
+		[name, age] => chỉ chạy function khi giá trị name hoặc age thay đổi
+		"không có gì" => chạy function mỗi lần mà component render lại
+
+
+- Routing: điều hướng
+	+ package: react-router-dom - ReactJS / react-router - React Native
+	+ Component: BrowserRouter > Routes > Route, Link, NavLink
+		# Hay dùng NavLink với Navbar, (Header/Footer), SideMenu
+
+	+ Hook: useParams, useSearchParams, useNavigate, ...
+
+	+ Routing with params
+	+ 404 not found 
+	+ Outlet
+
+	+ React Router v5 - React Router v6
+
+- Lịch sử Việt Nam
+	+ Các trận đánh trong lịch sử Việt Nam
+	+ Các nhân vật lịch sử Việt Nam
+	+ Quiz & Fact về lịch sử Việt Nam
+	+ Văn hóa Việt Nam qua các thời kỳ
