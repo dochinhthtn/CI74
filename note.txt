@@ -81,15 +81,22 @@
 
 
 - Routing: điều hướng
-	+ package: react-router-dom - ReactJS / react-router - React Native
+	+ package: react-router-dom - ReactJS (npm install react-router-dom)
 	+ Component: BrowserRouter > Routes > Route, Link, NavLink
 		# Hay dùng NavLink với Navbar, (Header/Footer), SideMenu
 
 	+ Hook: useParams, useSearchParams, useNavigate, ...
 
-	+ Routing with params
-	+ 404 not found 
-	+ Outlet
+	+ Routing with params: useParams, useSearchParams
+		# useParams: thường dùng trong những trang xem chi tiết
+		# useSearchParams: thường dùng trong những trang xem danh sách
+	
+	+ 404 not found
+		# path="*"
+		Lưu ý: 
+			với React Router v5 => <Route path="*" /> phải luôn luôn ở phía dưới cùng
+			với React Router v6 => 
+	+ Outlet: dùng khi có nested route
 
 	+ React Router v5 - React Router v6
 
@@ -98,3 +105,17 @@
 	+ Các nhân vật lịch sử Việt Nam
 	+ Quiz & Fact về lịch sử Việt Nam
 	+ Văn hóa Việt Nam qua các thời kỳ
+
+
+
+	+ tạo react project bằng cmd/git bash: npx create-react-app <tên project>
+	+ tạo repo trên github, add các thành viên trong nhóm vào
+	+ vào thư mục project vừa tạo, chạy các lệnh:
+		git init
+		git remote add origin <đường dẫn của repo>
+		git add .
+		git commit -m "Initial commit"
+		git branch -M master
+		git push origin master
+		
+	
