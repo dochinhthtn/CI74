@@ -100,4 +100,26 @@ const memeData = [
     }
 ];
 
-export default memeData;
+export function getAllMemes() {
+    return memeData;
+}
+
+export function getMemeById(id) {
+    return memeData.find((meme) => meme.id == id);
+}
+
+export function filterMemesByName(keyword) {
+    return memeData.filter((meme) => meme.name.toLowerCase().indexOf(keyword.toLowerCase()) > -1)
+}
+
+export function createMeme(memeData) {
+
+}
+
+export function editMeme(id, memeData) {
+
+}
+
+export function deleteMeme(id) {
+
+}
