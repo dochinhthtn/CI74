@@ -100,6 +100,14 @@
 
 	+ React Router v5 - React Router v6
 
+- HTTP:
+	+ React ko tương tác trực tiếp với CSDL (MySQL, MongoDB, ...)
+	+ API: những phương thức để tương tác với 1 dịch vụ (thư viện)
+	+ axios: npm install axios
+	+ cách giải quyết (Lấy dữ liệu || xử lý lỗi) khi gặp Promise
+		# dùng then để lấy dữ liệu, dùng catch để xử lý lỗi
+		# async/await: chỗ nào có Promise, chỗ đó có await. Function nào có await thì phải khai báo với async
+
 - Lịch sử Việt Nam
 	+ Các trận đánh trong lịch sử Việt Nam
 	+ Các nhân vật lịch sử Việt Nam

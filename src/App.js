@@ -1,6 +1,7 @@
 import './App.css';
 import BootstrapApp from './components/bootstrap_app/BootstrapApp';
 import ExpenseApp from './components/expense_app/ExpenseApp';
+import FoodApp from './components/food_app/FoodApp';
 import MemeApp from './components/meme_app/MemeApp';
 import QuizApp from './components/quiz_app/QuizApp';
 import RoutingApp from './components/routing_app/RoutingApp';
@@ -13,7 +14,7 @@ function App() {
     <>
       <MemeApp />
     </>
-  );  
+  );
 }
 
 {/* <div>
