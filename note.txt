@@ -108,6 +108,17 @@
 		# dùng then để lấy dữ liệu, dùng catch để xử lý lỗi
 		# async/await: chỗ nào có Promise, chỗ đó có await. Function nào có await thì phải khai báo với async
 
+- Optimization: 
+
+- Custom hook: 
+	+ Hook: useState, useEffect, useContext, (useRef, useMemo, useCallback, ...), useNavigate, useParams, ...
+		-> bản chất là 1 function được gọi trực tiếp trong component.
+	+ Nhiều trường hợp phải tạo 1 custom hook: useInput, useLocalStorage, useAPI
+		# những logic mà sử dụng lặp đi lặp lại
+	+ Tạo custom hook:
+		# tên của hook luôn bắt đầu bằng "use"
+		# có thể gọi những hook khác ở trong custom hook
+
 - Lịch sử Việt Nam
 	+ Các trận đánh trong lịch sử Việt Nam
 	+ Các nhân vật lịch sử Việt Nam
