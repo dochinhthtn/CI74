@@ -4,7 +4,11 @@ import { useForm } from "./hooks";
 
 export default function CreateProductForm({ onCreatedProduct }) {
 
-    const { handleInputChange, handleSubmit } = useForm();
+    // const { handleInputChange, handleSubmit } = useForm();
+
+    const form = useForm();
+    const handleInputChange = form.handleInputChange;
+    const handleSubmit = form.handleSubmit;
 
     const handleCreateProduct = (data) => {
         console.log('Tạo sản phẩm mới với data: ', data);
@@ -16,13 +20,13 @@ export default function CreateProductForm({ onCreatedProduct }) {
     // theSubmit là 1 function
 
     /* 
-        data = {name: 'a', code: 'b'};
-
         theSubmit = (event) => {
             event.preventDefault();
             handleCreateProduct(data);
         }
     */
+
+    
 
     return <Container>
         <Form onSubmit={theSubmit}>

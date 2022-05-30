@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { AuthContext, login } from './models/user';
 
-export default function LoginPage() {
+export default function LoginPage({onLoggedIn}) {
 
     const [email, setEmail] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -29,7 +29,8 @@ export default function LoginPage() {
             if (!user) { // nếu không tìm thấy user -> thông báo lỗi
                 setEmailError('Email hoặc mật khẩu không chính xác');
             } else { // nếu tìm thấy user -> cập nhật trạng thái đăng nhập của MemeApp
-                auth.setCurrentUser(user);
+                // auth.setCurrentUser(user);
+                onLoggedIn(user);
                 navigate('/');
             }
         }

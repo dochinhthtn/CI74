@@ -119,6 +119,8 @@
 		# tên của hook luôn bắt đầu bằng "use"
 		# có thể gọi những hook khác ở trong custom hook
 
+- GIT: 
+
 - Lịch sử Việt Nam
 	+ Các trận đánh trong lịch sử Việt Nam
 	+ Các nhân vật lịch sử Việt Nam

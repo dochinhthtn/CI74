@@ -28,7 +28,7 @@ export default function MemeApp() {
                     <Container fluid>
                         <Routes>
                             <Route path="/" element={<HomePage />} />
-                            <Route path="/login" element={<LoginPage />} />
+                            <Route path="/login" element={<LoginPage onLoggedIn={(user) => setCurrentUser(user)} />} />
                             <Route path="/register" element={<RegisterPage />} />
                             <Route path="/memes/:id" element={<MemeDetailPage />} />
                             <Route path="*" element={<h2 className="text-danger">Không tìm thấy trang nào bro ơi 😢😢</h2>} />
@@ -37,5 +37,6 @@ export default function MemeApp() {
                 </div>
             </BrowserRouter>
         </AuthContext.Provider>
+
     );
 }
