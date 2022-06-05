@@ -68,7 +68,7 @@
 
 - Side Effect (useEffect):
 	+ xử lý công việc bên ngoài của 1 component: 
-		load dữ liệu, 
+		load, fetch dữ liệu, 
 		tương tác timeout, interval (setTimeout, setInterval)
 		tương tác trực tiếp với 1 DOM (thay đổi nội dung, xử các sự kiện)
 		lắng nghe (subscribe, unsubscribe) 1 service nào đó (nâng cao)

@@ -2,16 +2,33 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Badge } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { getMemeById } from '../../data/meme_data';
+import { getCommentsByAgeAndBattle } from './models/comment';
+
+// memes/1
+// memes/2
 
 export default function MemeDetailPage() {
 
     const { id } = useParams();
     const [meme, setMeme] = useState({});
 
-    useEffect(() => {
-        let data = getMemeById(id);
-        setMeme(data);
-    }, [id]);
+    // useEffect(() => {
+    //     console.log('chạy khi id thay đổi giá trị')
+    //     let data = getMemeById(id);
+    //     setMeme(data);
+    // }, [id]);
+
+    // useEffect(() => {
+    //     console.log('chạy 1 lần duy nhất sau khi component render lần đầu tiên');
+    //     if (!ageId || !battleId) return;
+        
+    //     const data = getCommentsByAgeAndBattle(ageId, battleId);
+
+    // }, [ageId, battleId]);
+
+    // useEffect(() => {
+    //     console.log('chạy khi component render');
+    // });
 
     return (<Container className="meme-detail-page">
         <h2>Meme detail</h2>
